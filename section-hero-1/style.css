@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    color: var(--secondary-color);
+}
+
+.container{
+    display: grid;
+    max-width: 900px;
+    padding: 10px 0 0 10px;
+    min-height: 500px;
+    margin: 10px auto 0 auto;
+    background-image: url(subject//elia-pellegrini-WFj-v5a4Xdo-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 1fr 120px;
+    grid-template-areas: 
+        "menu menu search search"
+        "content content audio audio"
+        "rating footer footer img";
+    }
+
+.nav{
+    grid-area: menu;
+}
+.menu{
+    display: inline;
+    padding: 5px;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+a:hover{
+    color: var(--hover-color);
+}
+.fa-align-center:hover{
+    padding: 5px;
+    background: #ffffff6c;
+    border-radius: 5px;
+    color: var(--hover-color);
+}
+
+.searchbox{
+    grid-area: search;
+    display: flex;
+    justify-content: flex-end;
+
+    padding-right: var(--gutter);
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+.fa-search{
+    padding-left: var(--gutter);
+}
+.content{
+    grid-area: content;
+    padding: var(--gutter);
+}
+.content__h{
+    margin-top: 100px;
+    padding-left: var(--gutter);
+    font-size: 50px;
+}
+
+.audio{
+    grid-area: audio;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: var(--gutter);
+}
+
+.star__rating{
+    grid-area: rating;
+    display: inline;
+    margin-top: 40px;
+    padding: 5px;
+    font-size: 17px;
+    color: var(--secondary-color);
+}
+.rating__number{
+    margin-left: 5px;
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer{
+    grid-area: footer;
+    -webkit-backdrop-filter: blur(8px);
+}
+.footer__h{
+    padding: 5px;
+    opacity: 0.4;
+}
+.footer__content{
+    display: flex;
+}
+.footer__facts{
+    display: block;
+    padding-left: var(--gutter);
+}
+
+.end__img{
+    grid-auto-rows: "img";
+    width: 100%;
+    height: 100%;
+}
+
